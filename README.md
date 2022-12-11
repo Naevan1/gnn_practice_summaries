@@ -1,6 +1,5 @@
 # gnn_practice_summaries
-Uploading my practice summaries on GNN's in order to have them available for my work laptop
-Here I will include notes on GNN from different videos and stuff - I just use this instead fo textbook to save some time for me.
+
 
 Size and shapes change in graphs, which is a problem when we know that in general NN expect a specific input( e.g. with images of different size we resize.) So we need a method that can handle arbitrary inptut shapes.
 
@@ -16,13 +15,16 @@ OR , you could do the following : include pooling operations iteratevly to compr
 
 Similar nodes ( nodes with similar feature or similar context) will lead to similar node embeddings, the same way as similar graphs lead to similar graph embeddings using a gnn.
 
-Size of node embeddings is a hyper parameter. It starts with the amount of features, but after the GNN operations it changes, usually increasing, and they no longer " make sense" in a typical way. (they cannot DIRECTLY be interpreted, as they are an artifiical compound of the node and edge information on the whole graph.)
+*Size of node embeddings is a hyper parameter. It starts with the amount of features, but after the GNN operations it changes, usually increasing, and they no longer " make sense" in a typical way. (they cannot DIRECTLY be interpreted, as they are an artifiical compound of the node and edge information on the whole graph.)*
 
-Lastly, edge features can also be processed in the gnn, and will be combined into these node embeddings.
+*Lastly, edge features can also be processed in the gnn, and will be combined into these node embeddings.*
 
 Message passing Layers are the most imporant thing in a GNN : They are responsible for converting the node and edge features into the NODE EMBEDDINGS.
 
-ALL IN ALL : The NODE EMBEDDINGS hold information on the whole graph - node properties,adjacencies, overall graph structure and connectivity - including the context of the NODE ITSELF in the graph.
+*ALL IN ALL : The NODE EMBEDDINGS hold information on the whole graph - node properties,adjacencies, overall graph structure and connectivity - including the context of the NODE ITSELF in the graph.*
+
+
+
 
 
 This takes information from our current node state(feature vector) and the infromaation about our direct neighbhours node states.
